@@ -1,0 +1,77 @@
+@model Registrazione
+
+@{
+    ViewData["Title"] = "SignUp";
+}
+
+<div class="container">
+    <div class="text-center mt-5">
+        <h1 class="display-4">@ViewData["Title"]</h1>
+
+        <form class="mt-4" method="post" action="Riepilogo">
+            <div class="form-group row justify-content-center">
+                <label asp-for="Nome" class="col-sm-2 col-form-label text-right">Nome:</label>
+                <div class="col-sm-4">
+                    <input asp-for="Nome" placeholder="Es. Mario Rossi" class="form-control" value="" required>
+                </div>
+            </div>
+            
+            <div class="form-group row justify-content-center">
+                <label asp-for="Cognome" class="col-sm-2 col-form-label text-right">Cognome:</label>
+                <div class="col-sm-4">
+                    <input asp-for="Cognome" placeholder="Es. Rossi" class="form-control" value=""required>
+                </div>
+            </div>
+
+            <div class="form-group row justify-content-center">
+                <label asp-for="Email" class="col-sm-2 col-form-label text-right">Email:</label>
+                <div class="col-sm-4">
+                    <input asp-for="Email" placeholder="Es. example@dominio.com" class="form-control" value=""required>
+                </div>
+            </div>
+
+            <div class="form-group row justify-content-center">
+                <label asp-for="DataDiNascita" class="col-sm-2 col-form-label text-right">Data di nascita:</label>
+                <div class="col-sm-4">
+                    <input asp-for="DataDiNascita" type="date" class="form-control" value="" required>
+                </div>
+            </div>
+
+            <div class="form-group row justify-content-center">
+            <label asp-for="Sesso" class="col-sm-2 col-form-label text-right">Sesso:</label>
+            <div class="col-sm-4">
+            <div class="form-check">
+            <input type="radio" asp-for="Sesso" value="M" class="form-check-input" id="radioMaschio" required>
+            <label class="form-check-label" for="radioMaschio">Maschio</label>
+                </div>
+                <div class="form-check">
+                        <input type="radio" asp-for="Sesso" value="F" class="form-check-input" id="radioFemmina" required>
+                        <label class="form-check-label" for="radioFemmina">Femmina</label>
+                </div>
+                    <div class="form-check">
+                        <input type="radio" asp-for="Sesso" value="Altro" class="form-check-input" id="radioAltro" required>
+                        <label class="form-check-label" for="radioAltro">Non binario</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row justify-content-center">
+                <label asp-for="Ruolo" class="col-sm-2 col-form-label text-right ">Ruolo:</label>
+                <div class="col-sm-4">
+                    <select asp-for="Ruolo" class="form-control"required>
+                        <option value=""selected></option>
+                        <option value="Studente">Studente</option>
+                        <option value="Docente">Docente</option>
+                        <option value="Genitore">Genitore</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-group row justify-content-center">
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-primary">SignUp</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

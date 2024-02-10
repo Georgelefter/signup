@@ -1,0 +1,30 @@
+@model List<Prodotto>
+
+@{
+    ViewData["Title"] = "Cart";
+}
+
+<div class="container">
+    <div class="text-center mt-5">
+        <h1 class="display-4">@ViewData["Title"]</h1>
+
+        @if (Model != null && Model.Any())
+        {
+            <div>
+                <h3>Carrello:</h3>
+                <ul>
+                    @foreach (var prodotto in Model)
+                    {
+                        <li>@prodotto.Nome - Quantità: @prodotto.Quantita</li>
+                    }
+                </ul>
+            </div>
+        }
+        else
+        {
+            <p>Il carrello è vuoto.</p>
+        }
+    </div>
+</div>
+
+

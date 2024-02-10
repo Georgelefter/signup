@@ -1,0 +1,39 @@
+@model Registrazione
+
+@{
+    ViewData["Title"] = "Riepilogo";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="display-4">@ViewData["Title"]</h1>
+
+        <div class="card mt-4">
+            <div class="card-body">
+                <p class="card-text"><strong>Nome:</strong> @Model.Nome</p>
+                <p class="card-text"><strong>Cognome:</strong> @Model.Cognome</p>
+                <p class="card-text"><strong>Email:</strong> @Model.Email</p>
+                <p class="card-text"><strong>Data di nascita:</strong> @Model.DataDiNascita</p>
+                <p class="card-text"><strong>Sesso:</strong> @Model.Sesso</p>
+                <p class="card-text"><strong>Ruolo:</strong> @Model.Ruolo</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
